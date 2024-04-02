@@ -5,11 +5,19 @@
 }
 html {
 	background-color: white;
+	
+}
+.logo {
+    float:left;
+    margin-right:1em;
+    padding-rigth:30px;
+    padding-left:30px;
 }
 body {
-	font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 800px;
+    width: 98%;
+    max-width: 960px;
     margin: 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
@@ -19,9 +27,9 @@ a:focus, a:hover {
 }
 /* the styles for the header */
 header {
-	padding: 1.5em 0 2em 0;
+	padding: 1.5em 2em 1;
 	border-bottom: 3px solid #931420;
-		background-image: -moz-linear-gradient(
+	background-image: -moz-linear-gradient(
 	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
 	background-image: -webkit-linear-gradient(
 	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
@@ -45,6 +53,11 @@ header img {
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
 }
+
+#mobile_menu{
+	display:none;
+}
+
 /* the styles for the navigation menu */
 #nav_menu ul {
 	list-style-type: none;
@@ -57,13 +70,16 @@ header img {
 }
 #nav_menu ul li a {
     display: block;
-    width: 160px;
+    width: 100px;
     text-align: center;
-    padding: 1em 0;
+    padding: 1em 2em;
     text-decoration: none;
     background-color: #800000;
     color: white;
     font-weight: bold;
+
+#nav_menu ul ul li a{
+	width:100%;
 }
 #nav_menu a.current {
 	color: yellow;
@@ -84,22 +100,32 @@ header img {
     clear: both;
     display: block;
 }
+.shadow{
+   text-shadow: 2px 2px 2px #800000
+}
+
+.circle{
+    list-style-type: circle;
 
 /* the styles for the section */
 section {
-	width: 525px;
+	width: 55%;
 	float: right;
-	padding: 0 20px 20px 20px;
+	padding: 0 2.5% 20px 2.5%;
 }
 section h1 {
 	font-size: 150%;
 	padding: .5em 0 .25em 0;
-	margin: 0;
+	
 }
 section h2 {
 	color: #800000;
 	font-size: 130%;
 	padding: .5em 0 .25em 0;
+}
+section h3{
+  font-size:105%;
+  padding-bottom: .25em;
 }
 section p {
 	padding-bottom: .5em;
@@ -133,11 +159,13 @@ article img {
 	float: right;
 	margin: .5em 0 1em 1em;
 	border: 1px solid black;
+	max-width:40%;
+	min-width:150px;
 }
 
 /* the styles for the aside */
 aside {
-	width: 215px;
+	width: 30%;
 	float: right;
 	padding: 0 0 20px 20px;
 }
@@ -166,3 +194,49 @@ footer p {
 	color: white;
 	padding: 1em 0;
 }
+
+@media screen and (max-width:800px){
+	aside h2 {
+		font-size:85%;
+	}
+	section h1{
+		font-size:125%;
+	}
+	section h2, aside h2{
+		font-size: 110%;
+	}
+
+@media screen and (max-width: 600px)
+	header img {
+	 float: none;
+}
+header {
+      text-align: center;
+
+#nav_menu{
+	display:none;
+}
+
+#mobile_menu{
+	display:block;
+}
+.slicknav_menu{
+background-color: #800000;
+}
+
+section, aside{
+	float:none;
+	width:95%;
+}
+aside {
+   padding-right: 20px;
+}
+article img{
+	max-width:30%;
+}
+
+/* Improve formatting for the aside */
+aside > div{
+	column-count:2;
+}
+
